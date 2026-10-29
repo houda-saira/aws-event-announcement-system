@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Announcement System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📢 Event Announcement System</h1>
+        <p>Stay informed about upcoming events</p>
+    </header>
+
+    <main>
+
+        <!-- 1. Affichage des événements -->
+        <section id="events-section">
+            <h2>Upcoming Events</h2>
+
+            <div id="events-container">
+                <p>Loading events...</p>
+            </div>
+        </section>
+
+        <!-- 2. Inscription aux notifications -->
+        <section id="subscribe-section">
+            <h2>Subscribe to notifications</h2>
+
+            <form id="subscribe-form">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <!-- 3. Création d'un événement -->
+        <section id="create-event-section">
+            <h2>Create an event</h2>
+
+            <form id="event-form">
+
+                <div class="form-group">
+                    <label for="event-title">
+                        Event title *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="event-title"
+                        name="title"
+                        placeholder="Ex. : Server maintenance"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="event-date">
+                        Date *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="event-date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="event-time">
+                        Time *
+                    </label>
+
+                    <input
+                        type="time"
+                        id="event-time"
+                        name="time"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="event-description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="event-description"
+                        name="description"
+                        rows="4"
+                        placeholder="Describe the event..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-severity">
+                        Severity *
+                    </label>
+
+                    <select
+                        id="event-severity"
+                        name="severity"
+                        required
+                    >
+                        <option value="">-- Select severity --</option>
+                        <option value="info">Information</option>
+                        <option value="warning">Warning</option>
+                        <option value="critical">Critical</option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    Create event
+                </button>
+
+                <p
+                    id="event-message"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

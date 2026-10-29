@@ -1,0 +1,23 @@
+# Secrets et identifiants
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials
+.aws/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/

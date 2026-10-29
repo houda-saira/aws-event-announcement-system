@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Server Maintenance",
+    "date": "2026-10-10",
+    "time": "22:00",
+    "description": "The ERP server will be unavailable for approximately one hour.",
+    "severity": "critical"
+  },
+  {
+    "id": 2,
+    "title": "Network Maintenance",
+    "date": "2026-10-12",
+    "time": "02:00",
+    "description": "Network maintenance is scheduled during the night.",
+    "severity": "warning"
+  }
+]
