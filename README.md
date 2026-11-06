@@ -2,7 +2,8 @@
 
 A serverless application for event creation, email subscriptions, and automated event notifications, built using AWS managed services.
 
-<img width="960" height="390" alt="image" src="https://github.com/user-attachments/assets/6e8befab-bdaf-4c9c-87b0-1a3fe4bef8a2" /><img width="960" height="346" alt="image" src="https://github.com/user-attachments/assets/2ead7f37-de86-4e6a-a4a2-6a40d6d53226" />
+<img width="960" height="390" alt="image" src="https://github.com/user-attachments/assets/6e8befab-bdaf-4c9c-87b0-1a3fe4bef8a2" /><img width="960" height="346" alt="image" src="https://github.com/user-attachments/assets/2ead7f37-de86-4e6a-a4a2-6a40d6d53226" /> <img width="960" height="418" alt="image" src="https://github.com/user-attachments/assets/b557178a-dcd4-41e3-982d-b4a141d7ac20" />
+
 
 
 **Live Demo:** [Gather – Event Announcement System](https://d2ip8xq39wmurj.cloudfront.net/)
