@@ -1,18 +1,34 @@
 [
   {
     "id": 1,
-    "title": "Server Maintenance",
-    "date": "2026-10-10",
-    "time": "22:00",
-    "description": "The ERP server will be unavailable for approximately one hour.",
-    "severity": "critical"
+    "title": "Coffee & Good Conversations",
+    "date": "2026-11-07",
+    "time": "11:00",
+    "description": "Meet new people, share stories, and enjoy a relaxed morning over coffee. No agenda, no pressure — just good conversations and good company.",
+    "severity": "info"
   },
   {
     "id": 2,
-    "title": "Network Maintenance",
-    "date": "2026-10-12",
-    "time": "02:00",
-    "description": "Network maintenance is scheduled during the night.",
-    "severity": "warning"
+    "title": "Create & Connect",
+    "date": "2026-11-08",
+    "time": "14:00",
+    "description": "Spend an afternoon painting, experimenting with colors, and discovering your creative side. All skill levels are welcome.",
+    "severity": "info"
+  },
+  {
+    "id": 3,
+    "title": "Sunday Picnic Club",
+    "date": "2026-11-14",
+    "time": "12:30",
+    "description": "Bring your favorite snacks and meet new faces for a relaxed picnic filled with laughter, games, and lovely conversations.",
+    "severity": "info"
+  },
+  {
+    "id": 4,
+    "title": "Pasta, Friends & Stories",
+    "date": "2026-11-15",
+    "time": "18:00",
+    "description": "Cook a delicious meal together, discover new flavors, and enjoy a shared dinner. Come for the food, stay for the people.",
+    "severity": "info"
   }
 ]

@@ -1,143 +1,482 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Announcement System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbf8f4">
+  <meta name="description" content="Discover upcoming events and subscribe to event announcements.">
+
+  <title>Gather — Events worth showing up for</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin-login.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>📢 Event Announcement System</h1>
-        <p>Stay informed about upcoming events</p>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <main>
+  <!-- HEADER -->
+  <header class="site-header">
 
-        <!-- 1. Affichage des événements -->
-        <section id="events-section">
-            <h2>Upcoming Events</h2>
+    <a class="brand" href="#" aria-label="Gather home">
+      <span class="brand-mark" aria-hidden="true">g.</span>
+      <span>gather<span class="brand-period">.</span></span>
+    </a>
 
-            <div id="events-container">
-                <p>Loading events...</p>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#events-section">Discover</a>
+      <a href="#about-section">Our idea</a>
+      <a href="#subscribe-section">Newsletter</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <a class="header-cta" href="#events-section">
+        Explore events <span aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        class="admin-login-button"
+        id="admin-login-button"
+        type="button">
+        Admin login
+      </button>
+
+      <button
+        class="admin-login-button"
+        id="admin-logout-button"
+        type="button"
+        hidden>
+        Log out
+      </button>
+
+    </div>
+
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          A little more together
+        </p>
+
+        <h1>
+          Good things<br>
+          happen when<br>
+          <em>we gather.</em>
+        </h1>
+
+        <p class="hero-description">
+          Ideas, people and moments worth making time for.
+          Find your next reason to get together.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="button button-primary" href="#events-section">
+            Find your next event
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="text-link" href="#subscribe-section">
+            Get the latest
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <div class="hero-note">
+          <span class="note-icon" aria-hidden="true">✳</span>
+          <span>Curated moments. Meaningful connections.</span>
+        </div>
+
+      </div>
+
+      <div
+        class="hero-visual"
+        aria-label="Warm outdoor gathering at sunset"
+        role="img">
+
+        <div class="visual-orb orb-one"></div>
+        <div class="visual-orb orb-two"></div>
+
+        <div class="visual-caption">
+          <span class="caption-kicker">MAKE ROOM FOR</span>
+          <strong>Something<br>memorable.</strong>
+          <span class="caption-line"></span>
+        </div>
+
+        <div class="floating-note">
+          <span class="floating-icon">✦</span>
+
+          <span>
+            <strong>Your people are here.</strong>
+            <small>Find a moment to share.</small>
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events-section section-wrap" id="events-section">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="eyebrow">THE GOOD STUFF</p>
+
+          <h2>
+            Coming up <em>next.</em>
+          </h2>
+
+          <p class="section-intro">
+            A few things to look forward to.
+            Find something that speaks to you.
+          </p>
+        </div>
+
+        <span class="section-index">
+          01 <span>/</span> EVENTS
+        </span>
+
+      </div>
+
+      <div class="event-toolbar">
+
+        <span id="events-count" class="events-count">
+          A few moments to discover
+        </span>
+
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+
+          <input
+            type="search"
+            id="event-search"
+            placeholder="Search events…"
+            aria-label="Search events">
+        </label>
+
+      </div>
+
+      <div
+        id="events-container"
+        class="events-grid"
+        aria-live="polite">
+
+        <div class="loading-card">
+          <span class="loader"></span>
+          Finding your next event…
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section" id="subscribe-section">
+
+      <div class="newsletter-art" aria-hidden="true">
+        <span class="art-star star-a">✳</span>
+        <span class="art-star star-b">✦</span>
+        <span class="art-circle"></span>
+        <span class="art-letter">g.</span>
+      </div>
+
+      <div class="newsletter-copy">
+
+        <p class="eyebrow">A NOTE FROM US</p>
+
+        <h2>
+          Good things in<br>
+          your <em>inbox.</em>
+        </h2>
+
+        <p>
+          Get a heads-up when something lovely is coming up.
+          No noise, just the events worth knowing about.
+        </p>
+
+      </div>
+
+      <div class="newsletter-form-wrap">
+
+        <form id="subscribe-form" class="newsletter-form">
+
+          <label for="email">Your email address</label>
+
+          <div class="input-row">
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required>
+
+            <button class="button button-dark" type="submit">
+              Keep me posted
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+          <p class="form-footnote">
+            By subscribing, you agree to receive event announcements.
+          </p>
+
+          <p
+            id="message"
+            class="status-message"
+            role="status"
+            aria-live="polite">
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section section-wrap" id="about-section">
+
+      <div class="about-mark" aria-hidden="true">g.</div>
+
+      <div>
+        <p class="eyebrow">THE IDEA IS SIMPLE</p>
+
+        <h2>
+          Less scrolling.<br>
+          <em>More showing up.</em>
+        </h2>
+      </div>
+
+      <p class="about-description">
+        A good event can spark an idea, introduce a friend,
+        or turn an ordinary day into a story.
+        We make it easier to find your next one.
+      </p>
+
+    </section>
+
+    <!-- ADMIN WORKSPACE: HIDDEN UNTIL LOGIN -->
+    <section
+      class="admin-section section-wrap"
+      id="admin-section"
+      hidden>
+
+      <div class="admin-heading">
+
+        <div>
+          <p class="eyebrow">PROJECT TOOLS</p>
+
+          <h2>
+            Event <em>workspace.</em>
+          </h2>
+
+          <p class="section-intro">
+            Administrator workspace for publishing an announcement.
+          </p>
+        </div>
+
+        <span class="prototype-badge">
+          Admin access
+        </span>
+
+      </div>
+
+      <details class="admin-details" open>
+
+        <summary>
+          <span class="summary-icon">＋</span>
+
+          <span>
+            <strong>Create an event</strong>
+            <small>Publish a new announcement</small>
+          </span>
+
+          <span class="summary-arrow">↗</span>
+        </summary>
+
+        <form id="event-form" class="event-form">
+
+          <div class="form-grid">
+
+            <div class="form-group form-wide">
+              <label for="event-title">
+                Event title <span>*</span>
+              </label>
+
+              <input
+                type="text"
+                id="event-title"
+                name="title"
+                maxlength="120"
+                placeholder="e.g. Cloud community meetup"
+                required>
             </div>
-        </section>
 
-        <!-- 2. Inscription aux notifications -->
-        <section id="subscribe-section">
-            <h2>Subscribe to notifications</h2>
+            <div class="form-group">
+              <label for="event-date">
+                Date <span>*</span>
+              </label>
 
-            <form id="subscribe-form">
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    required
-                >
+              <input
+                type="date"
+                id="event-date"
+                name="date"
+                required>
+            </div>
 
-                <button type="submit">
-                    Subscribe
-                </button>
-            </form>
+            <div class="form-group">
+              <label for="event-time">
+                Time <span>*</span>
+              </label>
 
-            <p id="message" role="status" aria-live="polite"></p>
-        </section>
+              <input
+                type="time"
+                id="event-time"
+                name="time"
+                required>
+            </div>
 
-        <!-- 3. Création d'un événement -->
-        <section id="create-event-section">
-            <h2>Create an event</h2>
+            <div class="form-group form-wide">
+              <label for="event-description">
+                Description
+              </label>
 
-            <form id="event-form">
+              <textarea
+                id="event-description"
+                name="description"
+                rows="3"
+                maxlength="1000"
+                placeholder="What should people know?">
+              </textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="event-title">
-                        Event title *
-                    </label>
+            <div class="form-group">
+              <label for="event-severity">
+                Category <span>*</span>
+              </label>
 
-                    <input
-                        type="text"
-                        id="event-title"
-                        name="title"
-                        placeholder="Ex. : Server maintenance"
-                        required
-                    >
-                </div>
+              <select
+                id="event-severity"
+                name="severity"
+                required>
 
-                <div class="form-group">
-                    <label for="event-date">
-                        Date *
-                    </label>
+                <option value="">Choose a category</option>
+                <option value="info">Community / Information</option>
+                <option value="warning">Important update</option>
+                <option value="critical">Critical notice</option>
 
-                    <input
-                        type="date"
-                        id="event-date"
-                        name="date"
-                        required
-                    >
-                </div>
+              </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="event-time">
-                        Time *
-                    </label>
+          </div>
 
-                    <input
-                        type="time"
-                        id="event-time"
-                        name="time"
-                        required
-                    >
-                </div>
+          <div class="form-actions">
 
-                <div class="form-group">
-                    <label for="event-description">
-                        Description
-                    </label>
+            <p
+              id="event-message"
+              class="status-message"
+              role="status"
+              aria-live="polite">
+            </p>
 
-                    <textarea
-                        id="event-description"
-                        name="description"
-                        rows="4"
-                        placeholder="Describe the event..."
-                    ></textarea>
-                </div>
+            <button class="button button-primary" type="submit">
+              Publish event
+              <span aria-hidden="true">↗</span>
+            </button>
 
-                <div class="form-group">
-                    <label for="event-severity">
-                        Severity *
-                    </label>
+          </div>
 
-                    <select
-                        id="event-severity"
-                        name="severity"
-                        required
-                    >
-                        <option value="">-- Select severity --</option>
-                        <option value="info">Information</option>
-                        <option value="warning">Warning</option>
-                        <option value="critical">Critical</option>
-                    </select>
-                </div>
+        </form>
 
-                <button type="submit">
-                    Create event
-                </button>
+      </details>
 
-                <p
-                    id="event-message"
-                    role="status"
-                    aria-live="polite"
-                ></p>
+    </section>
 
-            </form>
-        </section>
+  </main>
 
-    </main>
+  <!-- FOOTER -->
+  <footer class="site-footer">
 
-    <script src="app.js"></script>
+    <a class="brand footer-brand" href="#">
+      <span class="brand-mark">g.</span>
+      <span>gather<span class="brand-period">.</span></span>
+    </a>
+
+    <p>Make time for good things.</p>
+
+    <span>Built with care · AWS serverless project</span>
+
+  </footer>
+
+  <!-- ADMIN LOGIN DIALOG -->
+  <dialog
+    id="admin-login-dialog"
+    class="admin-login-dialog"
+    aria-labelledby="login-title">
+
+    <form method="dialog" class="dialog-close-form">
+      <button
+        class="dialog-close"
+        aria-label="Close login"
+        value="cancel">
+        ×
+      </button>
+    </form>
+
+    <p class="eyebrow">GATHER ADMIN</p>
+
+    <h2 id="login-title">
+      Welcome <em>back.</em>
+    </h2>
+
+    <p class="login-intro">
+      Sign in to manage event announcements.
+    </p>
+
+    <p
+      id="login-message"
+      class="status-message"
+      role="status"
+      aria-live="polite">
+    </p>
+
+    <button
+      type="button"
+      id="continue-cognito-login"
+      class="button button-primary login-submit">
+
+      Continue with secure sign-in
+      <span aria-hidden="true">↗</span>
+
+    </button>
+
+    <p class="form-footnote">
+      You'll be redirected to Amazon Cognito to sign in securely.
+    </p>
+
+  </dialog>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
